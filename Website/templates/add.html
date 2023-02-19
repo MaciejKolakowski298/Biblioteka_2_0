@@ -1,13 +1,13 @@
 {% extends "base.html" %}
-{% block title %}Home{% endblock %}
+{% block title %}Biblioteka{% endblock %}
 {% block nav %}
     <div class="container">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link" href="/" role="button">Book list</a>
+            <a class="nav-link" href="/" role="button">Lista książek</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/add" role="button">Add book</a>
+            <a class="nav-link active" href="/add" role="button">Dodaj książkę</a>
           </li>
         </ul>
     </div>
@@ -16,13 +16,13 @@
 {% block content %}
 
 
-<h3 align="center">Add book</h3>
+<h3 align="center">Dodaj książkę</h3>
 
 <form method="POST">
   <div class="form-group">
     <div class="row">
         <div class="col">
-            <label for="title">Title</label>
+            <label for="title">Tytuł</label>
             <input
               type="text"
               class="form-control"
@@ -32,7 +32,7 @@
             />
         </div>
         <div class="col">
-            <label for="author">Authors</label>
+            <label for="author">Autorzy</label>
             <input
               type="text"
               class="form-control"
@@ -42,7 +42,7 @@
             />
         </div>
         <div class="col">
-                <label for="available">Available</label>
+                <label for="available">Na półce</label>
                 </br>
                 <input
                   type="checkbox"
@@ -52,6 +52,6 @@
             </div>
   </div>
   <br />
-  <button type="submit" class="btn btn-primary">Add</button>
+  <button type="submit" class="btn btn-primary">Dodaj</button>
 </form>
 {% endblock %}
