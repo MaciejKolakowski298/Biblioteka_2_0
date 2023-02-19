@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Lend a book{% endblock %}
+{% block nav %}
+    <div class="container">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="/" role="button">Book list</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add" role="button">Add book</a>
+          </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+
+<h3 align="center">Lend a book</h3>
+
+<form method="POST">
+  <div class="form-group">
+    <div class="row">
+        <div class="col">
+            <label for="title">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              name="title"
+              placeholder="Title"
+              value="{{book.title}}"
+            />
+        </div>
+        <div class="col">
+            <label for="author">Authors</label>
+            <input
+              type="text"
+              class="form-control"
+              id="authors"
+              name="authors"
+              placeholder="Authors"
+              value="{{book.authors}}"
+            />
+        </div>
+        <div class="col">
+                <label for="available">Available</label>
+                </br>
+                <input
+                  type="checkbox"
+                  id="available"
+                  name="available"
+                />
+            </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="user">user</label>
+            <input
+              type="text"
+              class="form-control"
+              id="user"
+              name="user"
+              placeholder="user"
+            />
+        </div>
+    </div>
+  <br />
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+{% endblock %}
