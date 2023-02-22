@@ -23,7 +23,7 @@ def create_app():
     return app
 
 def create_database(app):
-    if not path.exists('website/'+ DB_NAME):
+    if not path.exists('Website/'+ DB_NAME):
         with app.app_context():
             db.create_all()
         print('database created')

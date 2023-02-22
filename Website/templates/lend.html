@@ -21,6 +21,17 @@
 <form method="POST">
   <div class="form-group">
     <div class="row">
+        <div hidden class="col">
+          <label for="id">id</label>
+          <input
+            type="text"
+            class="form-control"
+            id="id"
+            name="id"
+            placeholder="id"
+            value="{{book.id}}"
+          />
+        </div>
         <div class="col">
             <label for="title">Tytuł</label>
             <input
